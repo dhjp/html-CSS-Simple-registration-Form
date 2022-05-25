@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!-- CSS PAET------>
+    <style>
+        :root{
+            --first-color: #1a73e8;
+            --input-color: #808688;
+            --border-color: #dadce0;
+
+            --body-font: 'roboto' , sans-serif;
+            --normal-font-size:1rem;
+            --small-font-sieze:.75rem;
+        }
+
+        *,::before, ::after{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0px;
+            padding: 0px;
+            font-family: var(--body-font);
+            font-size: var(--normal-font-size);
+        }
+        h1{
+            margin: 0px;
+        }
+
+        .f1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form{
+            width: 360px;
+            padding: 4rem 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(92,99,105,.2);
+        }
+        .f_tital{
+            font-weight: 400;
+            margin-bottom: 3rem;
+        }
+        .f_div{
+            position: relative;
+            height: 40px;
+            margin-bottom: 1.5rem;
+        }
+        .f_input{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: var(--normal-font-size);
+            border: 1px solid var(--border-color);
+            border-radius: .5rem;
+            outline: none;
+            padding: 1rem;
+            background: none;
+            z-index: 1;
+        }
+        .f_label{
+            position: absolute;
+            left: 1rem;
+            top: .75rem;
+            padding: 0 .25rem;
+            background-color: #fff ;
+            color: var(--input-color);
+            font-size: var(--normal-font-size);
+            transition: .3s;
+        }
+
+        .f_btn{
+            display: block;
+            margin-left: auto;
+            padding: .75rem 2rem;
+            outline: none;
+            border: none;
+            background-color:var(--first-color) ;
+            color: #fff;
+            font-size: var(--normal-font-size);
+            border-radius: .5rem;
+            cursor: pointer;
+            transition: .3s;
+        }
+        .f_btn:hover{
+            box-shadow: 0 10px 36px rgba(0,0,0,.15);
+        }
+        
+        .f_input:focus + .f_label{
+            top: -.5rem;
+            left: .8rem;
+            color: var(--first-color);
+            font-size: var(--small-font-sieze);
+            font-weight: 500;
+            z-index: 10;
+        }
+        .f_input:not(:placeholder-shown).f_input:not(:focus)+ .f_label{
+            top: -.5rem;
+            left: .8rem;       
+            font-size: var(--small-font-sieze);
+            font-weight: 500;
+            z-index: 10;
+        }
+        .f_input:focus{
+            border: 1.5px solid var(--first-color);
+            transition: .3s;
+        }
+
+    </style>
+<!-- END CSS PAET-->
+
+</head>
+<body>
+    <div class="f1">
+        <form action="" class="form">
+            <h1 class="f_tital">Regisreation</h1>
+            <div class="f_div">
+                <input type="text" class="f_input" placeholder="">
+                <label for="" class="f_label">Full Name</label>
+            </div>
+            <div class="f_div">
+                <input type="text" class="f_input" placeholder="">
+                <label for="" class="f_label">Email</label>
+            </div>
+            <div class="f_div">
+                <input type="password" class="f_input" placeholder="">
+                <label for="" class="f_label">Password</label>
+            </div>
+
+            <input type="submit" class="f_btn" value="Sing In">
+            
+        </form>
+    </div>
+</body>
+</html>
