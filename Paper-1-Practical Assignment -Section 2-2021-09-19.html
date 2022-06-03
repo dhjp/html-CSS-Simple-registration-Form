@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Paper-1-Practical Assignment  - Section 2-2021-09-19</title>
+</head>
+
+<body>
+<div style="border:thin black solid; width:50%;position:absolute;left:5cm;padding:20px">
+<h1>Registration Form</h1>
+<form method="post" action="reg.php" onsubmit="return process()">
+<p>
+<label id="Label1">Full Name</label>
+<input name="Text1" type="text" id="fname" />
+</p>
+<p>
+<label id="Label1">Email</label>
+<input name="Text1" type="text" id="email" />
+</p>
+<p>
+<label id="Label1">Password</label>
+<input name="Text1" type="password" id="pass" />
+</p>
+<p>
+<label id="Label1">Plan</label>
+<select name="Select1" id="plan">
+			<option value="Basic">Basic</option>
+			<option value="Standard">Standard</option>
+			<option value="Premium">Premium</option>
+		</select>
+</p>
+
+	<p>
+	<input name="Submit1" type="submit" value="Sign-Up" >
+	<input name="Reset1" type="reset" value="Clear" />
+	</p>
+
+</form>
+<script>
+function process(){
+var fn=document.getElementById("fname").value;
+var email=document.getElementById("email").value;
+var pass=document.getElementById("pass").value;
+if(pass.length<6){
+	window.alert("Password length is not sufficient");
+	return false;
+}		
+var plan=document.getElementById("plan").value;
+window.alert(fn+" you have successfully registered for a "+plan+"Plan");
+return true;
+}
+</script>
+</div>
+</body>
+
+</html>
